@@ -9,4 +9,19 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
+
+/*Extend the bootRun and test tasks to set the required environment variable
+by adding the following
+*/
+
+// environment variable for bootRun task
+bootRun.environment([
+        "WELCOME_MESSAGE": "hello from environment",
+])
+
+// environment variable for test task
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
