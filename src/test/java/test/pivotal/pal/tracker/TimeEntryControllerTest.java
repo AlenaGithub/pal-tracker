@@ -17,6 +17,7 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
+
 public class TimeEntryControllerTest {
     private TimeEntryRepository timeEntryRepository;
     private TimeEntryController controller;
@@ -35,9 +36,7 @@ public class TimeEntryControllerTest {
             .when(timeEntryRepository)
             .create(any(TimeEntry.class));
 
-
         ResponseEntity response = controller.create(timeEntryToCreate);
-
 
         verify(timeEntryRepository).create(timeEntryToCreate);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);

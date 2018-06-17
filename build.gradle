@@ -9,7 +9,13 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.1")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+springBoot {
+    buildInfo()
 }
 
 /*Extend the bootRun and test tasks to set the required environment variable
