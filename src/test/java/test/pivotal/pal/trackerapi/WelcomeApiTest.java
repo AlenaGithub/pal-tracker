@@ -23,7 +23,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = PalTrackerApplication.class, webEnvironment = RANDOM_PORT)
-@TestPropertySource(properties = {"welcome_message = Hello from test"})
+@TestPropertySource(properties = {"WELCOME_MESSAGE = Hello from test"})
 public class WelcomeApiTest {
 
     @LocalServerPort
