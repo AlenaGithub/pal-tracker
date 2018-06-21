@@ -53,10 +53,10 @@ bootRun.environment([
         "SPRING_DATASOURCE_URL": developmentDbUrl,
 ])
 
-// environment variable for test task
+// environment variable for gradle test task
 def testDbUrl = "jdbc:mysql://localhost:3306/tracker_test?user=tracker&useSSL=false"
 test.environment([
-        "WELCOME_MESSAGE": "Hello from test env",
+        "WELCOME_MESSAGE": "Hello from test",
         "SPRING_DATASOURCE_URL": testDbUrl,
 ])
 

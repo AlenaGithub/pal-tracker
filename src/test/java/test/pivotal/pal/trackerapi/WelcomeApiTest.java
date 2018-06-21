@@ -30,6 +30,6 @@ public class WelcomeApiTest {
     @Test
     public void exampleTest() {
         String body = restTemplate.getForObject("/hello", String.class);
-        assertThat(body).isEqualTo("Hello from test application properties");
+        assertThat(body).isEqualTo("Hello from test");
     }
 }
